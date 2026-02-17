@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazin Mobilă Online - Acasă</title>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <h1>MobilăHome</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Acasă</a></li>
+                <li><a href="cart.html">Coș</a></li>
+                <li><a href="cont.html">Cont / Înregistrare</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Container principal pentru layout două coloane -->
+    <div style="overflow: hidden;">
+
+        <!-- Coloana stângă: Categorii + Filtru preț -->
+        <div style="width: 25%; float: left; padding: 15px; border-right: 1px solid #ccc;">
+            <aside>
+                <h2>Categorii</h2>
+                <ul>
+                    <li><a href="#">Mese</a> ></li>
+                    <li><a href="#">Scaune</a> ></li>
+                    <li><a href="#">Capele</a> ></li>
+                    <li><a href="#">Dormitoare</a> ></li>
+                    <li><a href="#">Dulapuri</a> ></li>
+                    <li><a href="#">Comodă</a> ></li>
+                    <li><a href="#">Noptiere</a> ></li>
+                    <li><a href="#">Oglinzi</a> ></li>
+                </ul>
+
+                <h3>Filtrează după preț</h3>
+                <form action="#" method="get">
+                    <label for="pret-de-la">De la:</label><br>
+                    <input type="number" id="pret-de-la" name="pret-de-la" min="0" placeholder="ex. 500">
+                    <br><br>
+
+                    <label for="pret-pana-la">Până la:</label><br>
+                    <input type="number" id="pret-pana-la" name="pret-pana-la" min="0" placeholder="ex. 5000">
+                    <br><br>
+
+                    <button type="submit">Aplică filtru</button>
+                </form>
+
+                <p><a href="index.html">Resetează filtrele</a></p>
+            </aside>
+        </div>
+
+        <!-- Coloana dreaptă: Produse -->
+        <div style="width: 75%; float: left; padding: 15px;">
+            <h2>Produse disponibile</h2>
+
+            <!-- Exemplu de produs 1 -->
+            <div style="margin-bottom: 20px; border: 1px solid #ddd; padding: 10px;">
+                <h3>Masă dining extensibilă stejar</h3>
+                <p>Preț: 1 799 lei</p>
+                <p>Dimensiuni: 160-220 × 90 cm, 6-8 persoane</p>
+                <a href="product.html?id=1">Vezi detalii</a>
+            </div>
+
+            <!-- Exemplu de produs 2 -->
+            <div style="margin-bottom: 20px; border: 1px solid #ddd; padding: 10px;">
+                <h3>Set 6 scaune tapițate gri</h3>
+                <p>Preț: 1 299 lei</p>
+                <p>Material: catifea, picioare metalice negre</p>
+                <a href="product.html?id=2">Vezi detalii</a>
+            </div>
+
+            <!-- Exemplu de produs 3 -->
+            <div style="margin-bottom: 20px; border: 1px solid #ddd; padding: 10px;">
+                <h3>Dormitor complet – pat + noptiere + comodă</h3>
+                <p>Preț: 4 999 lei</p>
+                <p>Pat 160×200 cm, 2 noptiere, comodă cu 6 sertare</p>
+                <a href="product.html?id=3">Vezi detalii</a>
+            </div>
+
+            <!-- Exemplu de produs 4 -->
+            <div style="margin-bottom: 20px; border: 1px solid #ddd; padding: 10px;">
+                <h3>Dulap cu 4 uși și oglindă</h3>
+                <p>Preț: 2 899 lei</p>
+                <p>Dimensiuni: 200 × 60 × 220 cm</p>
+                <a href="product.html?id=4">Vezi detalii</a>
+            </div>
+
+            <!-- Poți adăuga aici mai multe produse -->
+            <p><em>Mai multe produse vor fi afișate aici în funcție de categorie și filtru...</em></p>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer style="clear: both; text-align: center; padding: 20px; background: #f0f0f0; margin-top: 20px;">
+        <p>© 2026 MobilăHome – Magazin online de mobilă</p>
+        <p>Contact: contact@mobilahome.ro | Telefon: 0722 123 456</p>
+    </footer>
+
+</body>
+</html>

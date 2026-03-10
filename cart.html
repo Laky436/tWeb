@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coșul meu - Casa Mobilei</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .cart-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+        }
+
+            .cart-item:hover {
+                box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            }
+
+        .product-img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .quantity-btn {
+            width: 38px;
+            height: 38px;
+            font-size: 1.1rem;
+        }
+
+        .quantity-input {
+            width: 60px;
+            text-align: center;
+        }
+
+        .delete-btn {
+            color: #dc3545;
+            font-size: 1.3rem;
+            transition: color 0.2s;
+        }
+
+            .delete-btn:hover {
+                color: #c82333;
+            }
+
+        .total-section {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .btn-checkout {
+            font-size: 1.2rem;
+            padding: 14px 32px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                CASA<span class="text-danger">MOBILEI</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Înapoi la cumpărături</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="mb-4 fw-bold text-center">Coșul meu</h1>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="cart-item p-3 mb-3 d-flex align-items-center">
+                    <img src="https://confort.md/image/catalog/Canapea/N-4/suport%20brate2/4_72dpi.jpg"
+                         alt="Canapea" class="product-img me-3">
+                    <div class="flex-grow-1">
+                        <h5 class="mb-1">Canapea extensibilă gri</h5>
+                        <p class="text-muted mb-1">Material textil premium</p>
+                        <div class="fw-bold text-primary mb-2">2.499 lei</div>
+                    </div>
+
+                    <div class="d-flex align-items-center mx-4">
+                        <button class="btn btn-outline-secondary quantity-btn">-</button>
+                        <input type="number" class="form-control quantity-input mx-2" value="1" min="1">
+                        <button class="btn btn-outline-secondary quantity-btn">+</button>
+                    </div>
+
+                    <div class="text-end ms-3">
+                        <div class="fw-bold mb-2">2.499 lei</div>
+                        <a href="#" class="delete-btn"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                </div>
+
+                <div class="cart-item p-3 mb-3 d-flex align-items-center">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0RV1HTqKaLammQpxOTVXGBfWDbLbNB4LdeA&s"
+                         alt="Masă" class="product-img me-3">
+                    <div class="flex-grow-1">
+                        <h5 class="mb-1">Masă dining stejar 6 persoane</h5>
+                        <p class="text-muted mb-1">Design scandinav</p>
+                        <div class="fw-bold text-primary mb-2">1.799 lei</div>
+                    </div>
+
+                    <div class="d-flex align-items-center mx-4">
+                        <button class="btn btn-outline-secondary quantity-btn">-</button>
+                        <input type="number" class="form-control quantity-input mx-2" value="2" min="1">
+                        <button class="btn btn-outline-secondary quantity-btn">+</button>
+                    </div>
+
+                    <div class="text-end ms-3">
+                        <div class="fw-bold mb-2">3.598 lei</div>
+                        <a href="#" class="delete-btn"><i class="fas fa-trash-alt"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+                <div class="total-section p-4 sticky-top" style="top: 20px;">
+                    <h4 class="mb-4">Rezumat coș</h4>
+
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Subtotal (3 produse)</span>
+                        <span>6.097 lei</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Livrare</span>
+                        <span class="text-success">Gratuit</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-4">
+                        <h5>Total</h5>
+                        <h5 class="text-primary">6.097 lei</h5>
+                    </div>
+
+                    <a href="checkout.html" class="btn btn-primary btn-lg w-100 btn-checkout">
+                        Trece la livrare <i class="fas fa-arrow-right ms-2"></i>
+                    </a>
+
+                    <p class="text-center mt-3 small text-muted">
+                        Continuând, accepți <a href="#">termenii și condițiile</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p class="mb-0">© 2026 Casa Mobilei. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Mobilei - Magazin Online</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1618221195710-dd2dabb60b29?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+       
+        .product-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .navbar-brand img {
+            max-height: 50px; 
+            width: auto;
+        }
+
+        .lang-dropdown .dropdown-toggle {
+            padding: 0.5rem 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lang-flag {
+            width: 20px;
+            height: 15px;
+            object-fit: cover;
+            border: 1px solid #ccc;
+            border-radius: 2px;
+        }
+
+        .dropdown-menu .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/images/logo.jpg" alt="Casa Mobilei" height="45">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Acasă</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produse">Produse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Oferte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+
+                <div class="dropdown lang-dropdown me-3">
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://flagcdn.com/w20/md.png" alt="Moldova" class="lang-flag">
+                        ro
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                        <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/md.png" alt="Română" class="lang-flag"> ro</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/ru.png" alt="Русский" class="lang-flag"> rus</a></li>
+                        <li><a class="dropdown-item" href="#"><img src="https://flagcdn.com/w20/us.png" alt="English" class="lang-flag"> eg</a></li>
+                    </ul>
+                </div>
+
+                <form class="d-flex me-3">
+                    <input class="form-control me-2" type="search" placeholder="Caută mobilă..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-list-ul"></i> Categorii
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="categoriesDropdown" style="min-width: 220px;">
+                            <li><h6 class="dropdown-header">Categorii</h6></li>
+                            <li><a class="dropdown-item" href="#">Mese</a></li>
+                            <li><a class="dropdown-item" href="#">Scaune</a></li>
+                            <li><a class="dropdown-item" href="#">Capele</a></li>
+                            <li><a class="dropdown-item" href="#">Dormitoare</a></li>
+                            <li><a class="dropdown-item" href="#">Dulapuri</a></li>
+                            <li><a class="dropdown-item" href="#">Comodă</a></li>
+                            <li><a class="dropdown-item" href="#">Noptiere</a></li>
+                            <li><a class="dropdown-item" href="#">Oglinzi</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li><h6 class="dropdown-header">Sortare după preț</h6></li>
+                            <li><a class="dropdown-item" href="?sort=price-asc">Preț: mic → mare</a></li>
+                            <li><a class="dropdown-item" href="?sort=price-desc">Preț: mare → mic</a></li>
+                            <li><a class="dropdown-item" href="?sort=popularity">Popularitate</a></li>
+                            <li><a class="dropdown-item" href="?sort=newest">Cele mai noi</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item fw-bold" href="#">Toate produsele</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="fas fa-shopping-cart"></i> Coș <span class="badge bg-primary rounded-pill">0</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="cont.html">
+                            <i class="fas fa-user"></i> Cont
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Mobilă de calitate la prețuri accesibile</h1>
+            <p class="lead">Descoperă colecțiile noastre moderne pentru casă și birou</p>
+            <a href="#produse" class="btn btn-primary btn-lg mt-3">Vezi produsele</a>
+        </div>
+    </section>
+
+    <section id="produse" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Cele mai populare produse</h2>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card product-card h-100 shadow-sm">
+                        <img src="https://confort.md/image/catalog/Canapea/N-4/suport%20brate2/4_72dpi.jpg" class="card-img-top" alt="Canapea modernă">
+                        <div class="card-body">
+                            <h5 class="card-title">Canapea extensibilă gri</h5>
+                            <p class="card-text text-muted">Material textil premium, 3 locuri</p>
+                            <p class="fw-bold text-primary fs-4">2.499 lei</p>
+                            <a href="product.html" class="btn btn-outline-primary w-100">Vezi detalii</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card product-card h-100 shadow-sm">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0RV1HTqKaLammQpxOTVXGBfWDbLbNB4LdeA&s" class="card-img-top" alt="Masă dining">
+                        <div class="card-body">
+                            <h5 class="card-title">Masă dining stejar 6 persoane</h5>
+                            <p class="card-text text-muted">Design scandinav</p>
+                            <p class="fw-bold text-primary fs-4">1.799 lei</p>
+                            <a href="product.html" class="btn btn-outline-primary w-100">Vezi detalii</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card product-card h-100 shadow-sm">
+                        <img src="https://velleahome.md/uploads/live/styles/product_image_sized/800x/leglo_nemo_160_sonoma_bql_glanc.jpg?v=1741597690" class="card-img-top" alt="Pat matrimonial">
+                        <div class="card-body">
+                            <h5 class="card-title">Pat dublu cu sertare</h5>
+                            <p class="card-text text-muted">160x200 cm, tapitat</p>
+                            <p class="fw-bold text-primary fs-4">3.299 lei</p>
+                            <a href="product.html" class="btn btn-outline-primary w-100">Vezi detalii</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Casa Mobilei</h5>
+                    <p>Magazin online de mobilă modernă și clasică din România.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Link-uri utile</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Termeni și condiții</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Politica de confidențialitate</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Livrare și retur</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>Email: contact@casamobilei.ro<br>Telefon: 0722 123 456</p>
+                </div>
+            </div>
+            <hr class="bg-light">
+            <p class="text-center mb-0">© 2026 Casa Mobilei. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
